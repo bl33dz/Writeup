@@ -1,6 +1,6 @@
 # HBS CTF Writeup
 
-**Playing with JPG**
+## Playing with JPG ##
 
 Hint: Aku terdapat di bagian gambar itu dan temukan aku
 
@@ -22,7 +22,7 @@ Flag: ```HBS{this_is_very_e45y}```
 
 
 
-**Hidden File**
+## Hidden File ##
 
 Hint: I'm not a JPG file
 
@@ -61,7 +61,7 @@ Flag: ```HBS{basic_sten0}```
 
 
 
-**Useless Extension**
+## Useless Extension ##
 
 Hint: Extensions are useless like me
 
@@ -109,9 +109,9 @@ Flag: ```HBS{fake_3x_7}```
 
 
 
-**Fix Me**
+## Fix Me ##
 
-Hint: Maybe u shall check my hex
+Hint: Maybe u shall check my hex :)
 
 File: ezforen.jpg
 
@@ -136,7 +136,7 @@ Flag: ```HBS{Header_file_can change_everything}```
 
 
 
-**Basic Incident Handling**
+## Basic Incident Handling ##
 
 Hint: Need help ? here
 
@@ -156,7 +156,7 @@ Flag: ```HBS{s1mple_n3tw0rk_for3ns!c}```
 
 
 
-**My Cute Cat**
+## My Cute Cat ##
 
 Hint: Please help my cat here
 
@@ -182,7 +182,7 @@ Flag: ```HBS{__poor_cat_with_poor_git__}```
 
 
 
-**Recover the Site**
+## Recover the Site ##
 
 Hint: Nemes1s just hacked our website, can you please recover the flag inside ? Nemes1s said there was a hint inside zip file which named credential. Please help us here
 
