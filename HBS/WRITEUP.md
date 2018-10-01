@@ -70,7 +70,9 @@ Command:
 ```file hbs.pdf```
 
 Output:
-```hbs.pdf: Zip archive data, at least v2.0 to extract```
+```
+hbs.pdf: Zip archive data, at least v2.0 to extract
+```
 
 Ternyata outputnya adalah sebuah file zip, dan ketika saya extract menghasilkan file "data.txt", dan saya identifikasi file tersebut berisi base64. Lalu saya pun mendecode file tersebut dan meredirectnya ke file "output"
 
@@ -83,7 +85,9 @@ Command:
 ```file output```
 
 Output:
-```output: GIF image data, version 89a, 510 x 100```
+```
+output: GIF image data, version 89a, 510 x 100
+```
 
 Dan ketika saya membuka file tersebut dengan imagemagick, file tersebut menampilkan barcode. Lalu saya mendecode barcode tersebut dan menghasilkan output base64 lagi
 
@@ -99,3 +103,29 @@ scanned 1 barcode symbols from 1 images in 0.02 seconds
 Dan setelah saya decode base64 tersebut muncul lah flagnya
 
 Flag: ```HBS{fake_3x_7}```
+
+
+
+**Fix Me**
+
+Hint: Maybe u shall check my hex :)
+File: ezforen.jpg
+
+Kita diberikan sebuah file rusak yang harus diperbaiki. Pertama, saya cek hex dari file tersebut dan disini saya menggunakan ghex untuk melihatnya
+
+Command: ```ghex ezforen.jpg```
+
+Command tersebut akan membuka hex editor, karena bentuknya gui dan saya malas screenshot, saya kasih saja hexnya langsung
+
+Before:
+```
+53 50 30 31 00 10 4A 46 49 46 00 01 01 01 00 48
+```
+After:
+```
+FF D8 FF E0 00 10 4A 46 49 46 00 01 01 01 00 48
+```
+
+Setelah itu tinggal save file tersebut dan buka filenya, maka akan muncul flag di file gambar tersebut
+
+Flag: ```HBS{Header_file_can change_everything}```
