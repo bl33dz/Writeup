@@ -9,6 +9,7 @@ Setelah kita download, file tersebut memang terlihat file gambar biasa, namun co
 
 Command:
 ```file yumeno.jpg```
+
 Output:
 ```yumeno.jpg: JPEG image data, Exif standard: [TIFF image data, big-endian, direntries=7, orientation=upper-left, xresolution=98, yresolution=106, resolutionunit=2, software=Adobe Photoshop CS4 Macintosh, datetime=2014:01:07 17:35:42], comment: "HBS{this_is_very_e45y}", baseline, precision 8, 700x856, frames 3```
 
