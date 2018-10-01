@@ -179,3 +179,29 @@ Command: ```git log -p```
 Maka akan muncul flag dari chall ini
 
 Flag: ```HBS{__poor_cat_with_poor_git__}```
+
+
+
+**Recover the Site**
+
+Hint: Nemes1s just hacked our website, can you please recover the flag inside ? Nemes1s said there was a hint inside zip file which named credential. Please help us here
+
+Web: http://chall.hungrybirds.org:8020/
+
+Dari hint diatas terdapat file /credential.zip di web tersebut. Dan ketika saya mencoba membukanya ternyata file zip tersebut memang ada. Lalu, saya mengextract file tersebut dan munculah file user.txt dan pass.txt yang keduanya berisi wordlist
+
+Setelah itu saya mencoba melihat source code dari web tersebut dan saya menemukan admin login yang berada di /4dmIn-pAn3L
+
+Saat saya membuka page tersebut, saya dimintai user dan password dengan http authentication. Sayapun langsung mencoba bruteforce login tersebut dengan hydra dan wordlist dari credential diatas
+
+Command: ```hydra -L user.txt -P pass.txt -s 8020 -f chall.hungrybirds.org http-get /4dmIn-pAn3L```
+Output:
+```
+........
+[8020][http-get] host: chall.hungrybirds.org   login: Administrator   password: hunter
+........
+```
+
+Akhirnya saya menemukan user dan passwordnya, dan saya langsung login untuk mendapatkan flagnya
+
+Flag: ```HBS{12345_say_no_to_defacing_12345}```
