@@ -148,7 +148,7 @@ Command: ```wireshark easy.pcapng```
 
 Maka akan terbuka wireshark dalam bentuk GUI, lalu klik Analyze > Follow > TCP Stream atau dengan Ctrl + Alt + Shift + C dan akan terbuka window seperti pada ss berikut
 
-![Wireshark]("wireshark_ss.png")
+![Wireshark](https://github.com/bl33dz/Writeup/raw/master/HBS/wireshark_ss.png)
 
 Dan terlihat ada sesuatu di bagian User-Agent maka langsung saja didecode dan muncul lah flagnya
 
