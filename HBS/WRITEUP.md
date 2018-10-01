@@ -28,6 +28,7 @@ Kita diberi gambar sama seperti chall **Playing with JPG** tapi ternyata berbeda
 
 Command:
 ```binwalk yumeno2.jpg```
+
 Output:
 ```DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
@@ -39,6 +40,7 @@ Dari output diatas kita simpulkan file tersebut memiliki file lain dan berbentuk
 
 Command:
 ```unzip yumeno2.jpg```
+
 Output:
 ```Archive:  yumeno2.jpg
 warning [yumeno2.jpg]:  337247 extra bytes at beginning or within zipfile
@@ -60,6 +62,7 @@ Diberikan file pdf, namun saat dibuka file tersebut rusak, maka kita gunakan com
 
 Command:
 ```file hbs.pdf```
+
 Output:
 ```hbs.pdf: Zip archive data, at least v2.0 to extract```
 
@@ -72,6 +75,7 @@ Setelah itu saya identifikasi isi file output tersebut dan ternyata adalah sebua
 
 Command:
 ```file output```
+
 Output:
 ```output: GIF image data, version 89a, 510 x 100```
 
@@ -79,6 +83,7 @@ Dan ketika saya membuka file tersebut dengan imagemagick, file tersebut menampil
 
 Command:
 ```zbarimg output```
+
 Output:
 ```CODE-128:SEJTe2Zha2VfM3hfN30=
 scanned 1 barcode symbols from 1 images in 0.02 seconds```
