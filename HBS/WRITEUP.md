@@ -133,3 +133,23 @@ FF D8 FF E0 00 10 4A 46 49 46 00 01 01 01 00 48
 Setelah itu tinggal save file tersebut dan buka filenya, maka akan muncul flag di file gambar tersebut
 
 Flag: ```HBS{Header_file_can change_everything}```
+
+
+
+**Basic Incident Handling**
+
+Hint: Need help ? here
+
+File: easy.pcapng
+
+Diberikan sebuah pcapng capture file, maka langsung saja dibuka dengan wireshark
+
+Command: ```wireshark easy.pcapng```
+
+Maka akan terbuka wireshark dalam bentuk GUI, lalu klik Analyze > Follow > TCP Stream atau dengan Ctrl + Alt + Shift + C dan akan terbuka window seperti pada ss berikut
+
+![Wireshark]("wireshark_ss.png")
+
+Dan terlihat ada sesuatu di bagian User-Agent maka langsung saja didecode dan muncul lah flagnya
+
+Flag: ```HBS{s1mple_n3tw0rk_for3ns!c}```
