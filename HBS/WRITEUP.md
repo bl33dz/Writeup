@@ -3,6 +3,7 @@
 **Playing with JPG**
 
 Hint: Aku terdapat di bagian gambar itu dan temukan aku
+
 File: yumeno.jpg
 
 Setelah kita download, file tersebut memang terlihat file gambar biasa, namun coba kita cek menggunakan command "file"
@@ -24,6 +25,7 @@ Flag: ```HBS{this_is_very_e45y}```
 **Hidden File**
 
 Hint: I'm not a JPG file
+
 File: yumeno2.jpg
 
 Kita diberi gambar sama seperti chall **Playing with JPG** tapi ternyata berbeda, karena dari judulnya adalah **Hidden File** maka coba kita cek menggunakan command "binwalk"
@@ -62,6 +64,7 @@ Flag: ```HBS{basic_sten0}```
 **Useless Extension**
 
 Hint: Extensions are useless like me
+
 File: hbs.pdf
 
 Diberikan file pdf, namun saat dibuka file tersebut rusak, maka kita gunakan command "file" untuk mengetahui bentuk file tersebut
@@ -109,6 +112,7 @@ Flag: ```HBS{fake_3x_7}```
 **Fix Me**
 
 Hint: Maybe u shall check my hex
+
 File: ezforen.jpg
 
 Kita diberikan sebuah file rusak yang harus diperbaiki. Pertama, saya cek hex dari file tersebut dan disini saya menggunakan ghex untuk melihatnya
