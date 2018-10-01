@@ -195,6 +195,7 @@ Setelah itu saya mencoba melihat source code dari web tersebut dan saya menemuka
 Saat saya membuka page tersebut, saya dimintai user dan password dengan http authentication. Sayapun langsung mencoba bruteforce login tersebut dengan hydra dan wordlist dari credential diatas
 
 Command: ```hydra -L user.txt -P pass.txt -s 8020 -f chall.hungrybirds.org http-get /4dmIn-pAn3L```
+
 Output:
 ```
 ........
