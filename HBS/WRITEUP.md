@@ -108,7 +108,7 @@ Flag: ```HBS{fake_3x_7}```
 
 **Fix Me**
 
-Hint: Maybe u shall check my hex :)
+Hint: Maybe u shall check my hex
 File: ezforen.jpg
 
 Kita diberikan sebuah file rusak yang harus diperbaiki. Pertama, saya cek hex dari file tersebut dan disini saya menggunakan ghex untuk melihatnya
