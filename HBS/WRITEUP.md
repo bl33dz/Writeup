@@ -153,3 +153,29 @@ Maka akan terbuka wireshark dalam bentuk GUI, lalu klik Analyze > Follow > TCP S
 Dan terlihat ada sesuatu di bagian User-Agent maka langsung saja didecode dan muncul lah flagnya
 
 Flag: ```HBS{s1mple_n3tw0rk_for3ns!c}```
+
+
+
+**My Cute Cat**
+
+Hint: Please help my cat here
+
+Web: http://chall.hungrybirds.org:8030/
+
+Diberikan sebuah web bergambar kucing github, lalu saya menduga terdapat folder .git di web tersebut. Ketika saya cek ternyata benar, namun sayangnya mendapat http code 403, akhirnya saya menggunakan [git dumper](https://github.com/internetwache/GitTools/) untuk mendapatkan folder tersebut
+
+Command: ```./gitdumper.sh http://chall.hungrybirds.org:8030/.git/ HBS```
+
+Maka akan keluar output yang cukup panjang. Setelah itu selesai, folder .git akan tersimpan di ./HBS/.git dan kita pindah ke folder HBS
+
+Setelah pindah ke folder HBS selanjutnya kita recover file pada git tersebut dengan command "git"
+
+Command: ```git checkout .```
+
+Dan file akan muncul kembali namun flag belum muncul. Selanjutnya kita coba melihat log dari git tersebut
+
+Command: ```git log -p```
+
+Maka akan muncul flag dari chall ini
+
+Flag: ```HBS{__poor_cat_with_poor_git__}```
