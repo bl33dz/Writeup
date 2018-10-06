@@ -206,3 +206,54 @@ Output:
 Akhirnya saya menemukan user dan passwordnya, dan saya langsung login untuk mendapatkan flagnya
 
 Flag: ```HBS{12345_say_no_to_defacing_12345}```
+
+## Hello, Old Friend ##
+
+Hint: Hemmm, mungkin file ini bisa membantu masalah kalian :)
+
+File: encrypt_1.jpg.jpg.jpg.jpg
+
+Diberikan file dengan ekstensi jpg yang diulang ulang, namun ketika dicek ternyata hanya file txt dan berikut isinya
+
+Command: ```cat encrypt_1.jpg.jpg.jpg.jpg```
+
+Output:
+```
+Aku adalah cipher lama dengan nama Vigenere............
+jika kalian butuh password mungkin sebuah logo pada scoreboard bisa membantu kalian ^^
+
+Flag : OVF{b1xlfzv_z1lo_BhtxpzJzuvz_e3l}
+```
+
+Nah terlihat nama chipernya adalah Vigenere, dan passwordnya adalah "HungryBirds" seperti pada logo. Langsung saya decrypt dengan [Enigmator](http://merricx.github.io/enigmator/) dan pilih Vigenere dan akan muncul output berupa flag
+
+Flag: ```HBS{v1gnere_w1th_HungryBirds_k3y}```
+
+## Stop Spam Me !!! ##
+
+Hint: WTF THIS SHIT SPAM MESSAGE !!!!
+
+File: encrypt_2.rar.zip.jfif.7z
+
+Diberikan lagi sebuah file namun ternyata file tersebut hanyalah ASCII text, berikut potongan isinya
+
+Command: ```cat encrypt_2.rar.zip.jfif.7z```
+
+Output:
+```
+Dear Friend , Especially for you - this breath-taking 
+info . If you are not interested in our publications 
+and wish to be removed from our lists, simply do NOT 
+respond and ignore this mail . This mail is being sent 
+in compliance with Senate bill 1623 , Title 3 ; Section 
+301 . THIS IS NOT A GET RICH SCHEME . Why work for 
+somebody else when you can become rich within 45 weeks 
+. Have you ever noticed society seems to be moving 
+faster and faster and more people than ever are surfing 
+the web . Well, now is your chance to capitalize on
+.......
+.......
+```
+Dari potongan pesan tersebut saya menduga teks tersebut merupakan spam encode, lalu saya mencoba mendecode di [Spammimic](http://www.spammimic.com/decode.shtml) dan akan menghasilkan output berupa flag
+
+Flag: ```HBS{0h_wh4t_1s_th1s_sh1t_crypt0}```
