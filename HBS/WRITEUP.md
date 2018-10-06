@@ -257,3 +257,49 @@ the web . Well, now is your chance to capitalize on
 Dari potongan pesan tersebut saya menduga teks tersebut merupakan spam encode, lalu saya mencoba mendecode di [Spammimic](http://www.spammimic.com/decode.shtml) dan akan menghasilkan output berupa flag
 
 Flag: ```HBS{0h_wh4t_1s_th1s_sh1t_crypt0}```
+
+## Scanme ##
+
+Hint: scanme bruh... *(space) replace with (_)
+
+File: qrcode_1.png
+
+Pada chall ini diberikan sebuah qr code, sayapun mendecodenya dengan zbarimg
+
+Command: ```zbarimg qrcode_1.png```
+
+Output:
+```
+QR-Code:ymwuz tmdu ymwuz egemt emvm yqzvmpu ymzgeum kmzs ymzgeum
+scanned 1 barcode symbols from 1 images in 0.03 seconds
+```
+
+Dari output diatas saya menduga bahwa itu adalah sebuah chiper yaitu Caesar Chiper, lalu saya mencoba bruteforce shiftnya dengan [Enigmator](http://merricx.github.io/enigmator/cipher/caesar_shift.html) dan akan muncul sebuah teks yaitu
+
+Output: ```makin hari makin susah saja menjadi manusia yang manusia```
+
+Lalu dari hint yang terdapat soal, kita disuruh merubah spasi menjadi underscore
+
+Command: ```echo makin hari makin susah saja menjadi manusia yang manusia | tr ' ' '_'```
+
+Output: ```makin_hari_makin_susah_saja_menjadi_manusia_yang_manusia```
+
+Dan masukkan ke dalam format HBS{flag}
+
+Flag: HBS{makin_hari_makin_susah_saja_menjadi_manusia_yang_manusia}
+
+## Dibalik Pertahanan Sixty Four ##
+
+Hint: my friend say this is base64 encryption, but when i tried to decode, the return always weird character
+
+Code: ++QYndmbhRXZ0Bibhdmbv12bgkGZhpGIzV2crV3cgEmbphWakBCbpNXYoJXZiBSb1xWZiBCahNXdzBCahxGdhdmbhNHIhlXYrBibpdmbpBCahxWYzBSZyV2agkGZhpGIolGbp1WZtBCLzl2Zvx2blRWagsWY0BSahxWaulGZggWYn5WZ0BycpNXYmBSahRXYrlGZgMXYyV2agMXasFGdpBXYrBCchNWakBibh5WYrBycp5Wdt92agEmcptWakBSayl2a
+
+Diberikan sebuah string yang seperti base64 tapi sepertinya base64 tersebut dibalik, dan karena biasanya base64 dibelakangnya adalah double '=' maka saya merubah '+' dengan '='
+
+Command: ```echo "++QYndmbhRXZ0Bibhdmbv12bgkGZhpGIzV2crV3cgEmbphWakBCbpNXYoJXZiBSb1xWZiBCahNXdzBCahxGdhdmbhNHIhlXYrBibpdmbpBCahxWYzBSZyV2agkGZhpGIolGbp1WZtBCLzl2Zvx2blRWagsWY0BSahxWaulGZggWYn5WZ0BycpNXYmBSahRXYrlGZgMXYyV2agMXasFGdpBXYrBCchNWakBibh5WYrBycp5Wdt92agEmcptWakBSayl2a" | rev | tr '+' '==' | base64 -d```
+
+Output: ```kiri dikira komunis kanan dicap kapitalis keras dikatai fasis tengah dinilai tak ideologis, memilih jadi kere salah ingin kaya sangatlah susah belum berhasil dihina sukses jadi omongan tetangga```
+
+Karena tidak ada kemungkinan lain saya mencoba memasukkan output tersebut kedalam format flag dan ternyata benar
+
+Flag: HBS{kiri dikira komunis kanan dicap kapitalis keras dikatai fasis tengah dinilai tak ideologis, memilih jadi kere salah ingin kaya sangatlah susah belum berhasil dihina sukses jadi omongan tetangga}
