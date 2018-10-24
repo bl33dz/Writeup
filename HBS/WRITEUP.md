@@ -303,3 +303,45 @@ Output: ```kiri dikira komunis kanan dicap kapitalis keras dikatai fasis tengah 
 Karena tidak ada kemungkinan lain saya mencoba memasukkan output tersebut kedalam format flag dan ternyata benar
 
 Flag: HBS{kiri dikira komunis kanan dicap kapitalis keras dikatai fasis tengah dinilai tak ideologis, memilih jadi kere salah ingin kaya sangatlah susah belum berhasil dihina sukses jadi omongan tetangga}
+
+## My server has been hacked ##
+
+Hint: Serverku diretas. Ku mohon bantu aku temukan jejaknya
+
+File: hacker.pcapng
+
+Diberikan sebuah capture file, maka saya pun mencoba membukanya dengan wireshark
+
+Ketika saya buka saya dengan wireshark sayapun langsung mencoba melihat TCP Streamnya dan saya temukan sebuah clue yaitu "flag? langkahi dulu ftpku"
+
+Karena setelah saya cari cari dengan wireshark namun tidak ketemu saya mencoba memisahkan file tersebut dengan foremost
+
+Command: ```foremost hacker.pcapng```
+
+Setelah itu saya mencoba melihat apa saja yang ada dalam file hacker.pcapng dan terdapat sebuah file zip dan png
+
+Saya mencoba unzip file zip tersebut dan tidak ada flag disana, yang ada hanyalah sebuah teks "Where is the flag?"
+
+Lalu saya tertarik dengan file pngnya dan ketika saya buka ternyata sebuah qr code, maka saya scan qr tersebut dan munculah flag
+
+Command: ```zbarimg 00000148.png```
+
+Flag: ```HBS{forensic_is_ezpz}```
+
+## Hacked by Medusa ##
+
+Hint: Kali ini situsku diretas oleh hacker dengan nickname Medusa dan sepertinya dia meninggalkan sesuatu. Dapatkah kamu menemukannya?
+
+File: access.log
+
+Diberikan file access log, setelah saya buka saya melihat pada file tersebut terdapat sebuah pola yaitu directory berbentuk seperti kode biner
+
+Maka saya melakukan scripting untuk mengambil code biner pada file tersebut
+
+Code terdapat pada solved.php di directory ini
+
+Karena saya malas melakukan scripting untuk convert biner ke ascii maka saya gunakan online tools saja (bisa dicari di google)
+
+Flag: ```HBS{hacked_by_medusa}```
+
+
