@@ -18,6 +18,9 @@ Arkavidia 5.0 CTF adalah kompetisi yang diadakan oleh Institut Teknologi Bandung
 * Misc
   * [Welcome](#welcome)
   * [geet](#geet)
+* Crypto
+  * [eazy random](#eazy-random)
+  * [tut tuut](#tut-tuut)
 
 ## YaQueen
 
@@ -312,6 +315,57 @@ bleedz@nightmare:~/Writeup/Arkavidia/geet$ git log -p | grep "Arkav5{"
 ```
 
 Flag: ```Arkav5{git_s4ve_y0uR_h1st0ri3s}```
+
+## eazy random
+
+Type: Crypto  
+File: not-so-random.py ([Here](not-so-random.py)) & output.txt ([Here](output.txt))
+
+Diberikan 2 file, satu file script python dan satu lagi file output yang berisi flag yang sudah dienkripsi yaitu ```Clrbp7{4kt9m1srj_oqc3b8uew_lf}```
+
+Didalam script tersebut terdapat pemanggilan beberapa fungsi random, namun karena menggunakan fungsi ```random.seed()``` maka pola random akan sama. Karena kita sudah tau pola random akan sama, kita hanya perlu mengembalikan flag yang sudah dienkripsi menjadi flag asli dengan mengubah beberapa operator
+
+```python
+import random,string,sys
+
+flag = sys.argv[1]
+flag_enc = ""
+seed = "e2808b6c6f6ce2808b".decode("hex") # sed yang telah diubah kedalam hex
+random.seed(seed) # fungsi ini membuat pola random akan sama
+for c in flag:
+  if c.islower():
+    flag_enc += chr((ord(c)-ord('a')-random.randrange(0,26))%26 + ord('a'))
+  elif c.isupper():
+    flag_enc += chr((ord(c)-ord('A')-random.randrange(0,26))%26 + ord('A'))
+  elif c.isdigit():
+    flag_enc += chr((ord(c)-ord('0')-random.randrange(0,10))%10 + ord('0'))
+  else:
+    flag_enc += c
+
+print "Flag: " + flag_enc
+```
+
+Note: seed pada script diatas telah kami ubah menjadi hex karena mengandung karakter zero width space (U+200B)
+
+Lalu kita hanya perlu mengeksekusi script diatas dan akan muncul flagnya
+
+```
+bleedz@nightmare:~/Writeup/Arkavidia$ python solver.py "Clrbp7{4kt9m1srj_oqc3b8uew_lf}"
+Flag: Arkav5{1nv1s1ble_zer0w1dth_cc}
+```
+
+Flag: ```Arkav5{1nv1s1ble_zer0w1dth_cc}```
+
+## tut tuut
+
+Type: Crypto  
+File: tut-tuut.mp3 ([Here](tut-tuut.mp3))
+
+Diberikan sebuah file audio berformat mp3 dan saat kami putar insting "Coconut" kami mengatakan itu adalah sebuah kode morse. Kami pun langsung mencoba untuk mendecode morse tersebut. Namun, karena saya malas membuat script untuk mendecode audio morse tersebut, kami menggunakan tool online yang kami temukan di google (https://morsecode.scphillips.com/labs/audio-decoder-adaptive/)
+
+![Morse](https://i.ibb.co/G0gtWq2/morse.png)
+
+Flag: ```Arkav5{MORS3C0DE}```
 
 ## Thanks to
 * Riordan Ganezo
