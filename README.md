@@ -1,2 +1,1 @@
-# Writeup
-My CTF writeup
+# CTF Writeup
